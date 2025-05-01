@@ -1,0 +1,275 @@
+// Reset
+@import 'base/reset';
+@import "abstracts/variablesc";
+@import 'layout/header';
+@import 'layout/footer';
+@import 'mq/mobile';
+@import 'mq/tablet';
+@import 'vendors/bootstrap';
+
+
+/* INICIO */
+main {
+  div.banner{
+    display: flex;
+    gap: 20px;
+    background-color: $color-fondo;
+
+    .image,
+    .image2 {
+      flex: 1;
+      background-color: $color-fondo;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+    }
+
+    .text {
+      flex: 2;
+      padding: 20px;
+    }
+  }
+
+  .info {
+    display: flex;
+    color: $color-texto;
+    text-align: center;
+
+    div {
+      background-color: $color-secundario;
+      flex: 1;
+      padding: 20px;
+    }
+  }
+
+  .soluciones {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    color: $color-secundario;
+    text-align: center;
+
+    h2{
+      font-family: $fuente-secundaria;
+      margin: 20px;
+    }
+
+    p{
+      margin: 50px;
+      text-align: center;
+      width: 80%;
+    }
+
+    div {
+      background-color: $color-fondo;
+    }
+
+    .text {
+      flex: 3;
+      color: $color-footer-bg;
+    }
+
+    .image2 {
+      flex: 1;
+    }
+  }
+}
+
+/* COCINA */
+.banner-ppal {
+  width: 100%;
+  padding: 10px;
+  font-family: $fuente-secundaria;
+  background-color: $color-secundario;
+  text-align: center;
+}
+
+.container {
+  padding: 10px;
+  width: 100%;
+}
+
+.titulo {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.descripcion {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+.productos,
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.product {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  border: 2px solid #ccc;
+  padding: 30px;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    background-color: $color-fondo;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .precio {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .colors {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+@for $i from 1 through length($color-options) {
+  .color-option#{$i} {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: nth($color-options, $i);
+  }
+}
+
+/* PRODUCTOS */ /*hice un cambio para mobile asi se ven el columna*/
+
+.main-content {
+    padding: 20px;
+  }
+  
+ .category-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    .product-title {
+      text-align: center;
+      font-family: $fuente-principal;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+  .category-description {
+    width: 95%;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 50px;
+  }
+  
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .product img {
+    width: 100%;
+    height: auto;
+    background-color: $color-fondo;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+
+  /*CONOCENOS*/
+
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .section-description {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .team-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    max-width: 1200px;
+  
+    .team-member {
+      text-align: center;
+      border: 1px solid $color-texto;
+      padding: 20px;
+      background-color: $color-secundario;
+  
+      img {
+        width: 100%;
+        background-color: $color-fondo;
+        margin-bottom: 10px;
+      }
+  
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+/*CONTACTANOS*/
+
+main {
+    div {
+      background-color: $color-secundario;
+    }
+  }
+  
+  h1 {
+    font-family: $fuente-principal;
+  }
+  
+  form {
+    width: 100%;
+    background-color: $color-fondo;
+  
+    label {
+      display: block;
+      margin: 20px 0;
+      gap: 10px;
+      font-size: 0.98rem;
+      font-family: $fuente-principal
+    }
+  
+    input[type="text"],
+    input[type="email"] {
+      display: inline-block;
+      width: 98%;
+      height: 26px;
+      margin: 5px;
+      border: 1px solid $color-secundario;
+    }
+  }

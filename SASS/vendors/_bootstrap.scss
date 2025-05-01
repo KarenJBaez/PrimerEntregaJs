@@ -1,0 +1,13 @@
+.dropdown-menu {
+  background-color: #fff; 
+
+  .dropdown-item {
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    &:hover {
+      background-color: $color-principal;
+      color: #000;
+    }
+  }
+}

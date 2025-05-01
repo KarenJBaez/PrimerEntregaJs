@@ -1,0 +1,36 @@
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .banner {
+      flex-direction: row;
+    }
+  
+    .banner .text {
+      flex: 2;
+      padding: 20px;
+    }
+  
+    .info {
+      flex-wrap: nowrap;
+    }
+  
+    .soluciones {
+      flex-wrap: wrap;
+    }
+  
+    .soluciones .text {
+      flex: 2;
+    }
+  
+    .soluciones .image2 {
+      flex: 1;
+    }
+  
+    .pcontainer {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .product {
+      flex: 1 1 calc(33.33% - 10px);
+    }
+  }

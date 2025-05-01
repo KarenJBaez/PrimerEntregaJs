@@ -1,0 +1,29 @@
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: $color-principal;
+  font-family: Arial, sans-serif;
+
+  p {
+    margin: 0;
+    color: #000000;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+
+    a {
+      margin: 0 8px;
+      display: inline-block;
+
+      img {
+        width: 32px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Previene el scroll horizontal */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header,
+  .banner,
+  .info,
+  .soluciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  .banner .text,
+  .soluciones .text {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .productos,
+  .products-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .product {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,445 @@
+/*COMUN EN TODOS LOS HTML*/
+
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;;
+    line-height: 1.6;
+    color: black;
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #545454;
+      width: 100%;
+  }
+
+  .footer {
+    background-color: black;
+    color: white; 
+    text-align: center;
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+ 
+/*INICIO*/
+
+  .banner {
+    display: flex;
+    gap: 20px;
+    background-color: #545454;
+  }
+
+  .banner .image, .image2 {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+
+  .banner .text {
+    flex: 2;
+    padding: 20px;
+  }
+
+  .info {
+    display: flex;
+    
+    color: black;
+    text-align: center;
+  }
+
+  .info div {
+    background-color: rgb(255, 255, 255);
+    flex: 1;
+    padding: 20px;
+  }
+
+  .soluciones {
+    display: flex;
+    padding: 0px;
+    width: 100%;
+    color: black;
+   
+  }
+  .soluciones div {
+    background-color: white;
+  }
+
+  .soluciones .text {
+    flex: 3;
+    color:black;
+  }
+
+  .soluciones .image2 {
+    flex: 1;
+  }
+
+
+  /*MQ MOBILE*/
+
+  @media (max-width: 768px) {
+    header, .banner, .info, .soluciones {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .banner .text,
+    .soluciones .text {
+      padding: 10px 0;
+    }
+  }
+
+  /* MQ TABLET */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .banner {
+      flex-direction: row;
+    }
+
+    .banner .text {
+      flex: 2;
+      padding: 20px;
+    }
+
+    .info {
+      flex-wrap: nowrap;
+    }
+
+    .soluciones {
+      flex-wrap: wrap;
+    }
+
+    .soluciones .text {
+      flex: 2;
+    }
+
+    .soluciones .image2 {
+      flex: 1;
+    }
+  }
+
+
+  /*COCINA*/
+  
+.banner-ppal {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+.container {
+  padding: 10px;
+  width: 100%;
+}
+
+  .titulo {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  
+  .descripcion {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .product {
+    flex: 1 1 calc(33.33% - 20px); /* 3 productos por fila */
+    border: 2px solid #ccc;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    background-color: #eaeaea;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .product .precio {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .product .colors {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .color-option1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+  }
+  
+  .color-option2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  
+  .color-option3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: brown;
+  }
+  
+  .color-option4 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: lightpink;
+  }
+  
+  /*MQ MOBILE */
+  @media (max-width: 768px) {
+    .productos {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product {
+      flex: 1 1 100%; /* Cada producto ocupa el 100% del ancho */
+      margin-bottom: 20px;
+    }
+  
+    header h1 {
+      font-size: 20px;
+    }
+  }
+  
+  /* MQ TABLET */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .pcontainer {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .product {
+      flex: 1 1 calc(33.33% - 10px); /* 3 productos por fila */
+    }
+  }
+
+  /*Contactanos*/
+
+ main div {
+    background-color: gray;
+  }
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {
+    width: 100%;
+    background-color: white;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 0.98rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input[type="text"],
+input[type="email"] {
+  display: inline-block;
+  width: 98%;
+  height: 26px;
+  margin: 5px;
+  border: 1px solid gray;
+}
+
+
+/*conocenos*/
+.main-content {
+  padding: 20px;
+ display: flex;
+ justify-content: center; 
+ align-items: center;
+ gap: 40px;               
+ flex-wrap: wrap;                  
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.team-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.team-member {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #eaeaea;
+}
+
+.team-member img {
+  width: 100%;
+  background-color: #ddd;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 14px;
+}
+
+/* MQ MOBILE*/
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-container {
+    grid-template-columns: 1fr; /* Una columna en móviles */
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+}
+
+/* MQ TABLET*/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tabletas */
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+}
+
+
+/*PRODUCTOS*/
+
+.main-content {
+  padding: 20px;
+}
+
+.category-title {
+  width: 70%;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.category-description {
+  width: 70%;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product {
+  flex: 1 1 calc(33.33% - 20px); /* 3 productos por fila */
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  background-color: #eaeaea;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* MQ MOBILE*/
+@media (max-width: 768px) {
+  .products-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    flex: 1 1 100%; /* Cada producto ocupa el 100% del ancho */
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+}
+
+/* MQ TABLETS */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .products-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .product {
+    flex: 1 1 calc(33.33% - 10px); /* 3 productos por fila */
+  }
+}
