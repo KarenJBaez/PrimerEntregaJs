@@ -1,14 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Previene el scroll horizontal */
-}
-
-/* Mobile */
 @media (max-width: 768px) {
   header,
   .banner,
@@ -20,38 +9,69 @@ body {
     width: 100%;
   }
 
-  h1 {
+  h1, h2 {
     font-size: 20px;
     text-align: center;
   }
 
-  h2 {
-    text-align: center;
-  }
   .banner .text,
   .soluciones .text {
-    padding: 10px 0;
+    padding: 10px 20px;
     width: 100%;
   }
 
-  .productos,
-  .products-container {
+  .productos {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px 15px;
+    gap: 30px;
     width: 100%;
-    gap: 20px;
-    padding: 0 10px;
   }
 
   .product {
-    width: 100%;
-    max-width: 500px;
-    margin-bottom: 20px;
-  }
-
-  img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 100%;
-    height: auto;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    p {
+      margin: 5px 0;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.4;
+      padding: 0 10px;
+      word-wrap: break-word;
+    }
+
+    .colors {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+
+      span {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+      }
+
+      .color-option1 { background-color: #000; }
+      .color-option2 { background-color: #fff; border: 1px solid #999; }
+      .color-option3 { background-color: #c00; }
+      .color-option4 { background-color: #666; }
+    }
   }
 }
