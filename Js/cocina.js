@@ -29,7 +29,7 @@ function comprarProductos() {
     let eleccion = prompt("Ingresá el número del producto que querés agregar al carrito:");
     let index = parseInt(eleccion) - 1;
 
-    if (productos[index]) {
+    if (!isNaN(index) && productos[index]) {
       carrito.push(productos[index]);
       alert(`Agregaste "${productos[index].nombre}" al carrito.`);
       console.log(`Producto agregado: ${productos[index].nombre}`);
@@ -41,6 +41,12 @@ function comprarProductos() {
   }
 
   mostrarCarrito();
+
+  if (confirm("¿Querés finalizar la compra ahora?")) {
+    finalizarCompra();
+  } else {
+    alert("Podés seguir navegando o modificar tu carrito.");
+  }
 }
 
 // 4. Función que muestra el carrito final
@@ -63,11 +69,7 @@ function mostrarCarrito() {
   console.log("Carrito final:", carrito);
 }
 
-// 5. Lanzar la interacción
-if (confirm("¿Querés simular una compra de cocina?")) {
-  comprarProductos();
-}
-
+// 5. Función para finalizar la compra
 function finalizarCompra() {
   if (carrito.length === 0) {
     alert("Tu carrito está vacío. Agregá productos antes de finalizar la compra.");
@@ -93,4 +95,9 @@ function finalizarCompra() {
   } else {
     alert("Compra cancelada. Podés seguir modificando tu carrito.");
   }
+}
+
+// 6. Lanzar simulación automática al entrar a la página
+if (confirm("¿Querés simular una compra de cocina?")) {
+  comprarProductos();
 }
